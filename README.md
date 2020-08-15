@@ -27,3 +27,25 @@ h :: (b -> c) -> (a -> b) -> a -> c
 h f g = f . g
 ```
 
+### 3. Write a program that tries to test that your composition function respects identity.
+
+Function comparison for partial functions is undefined for Turing Machin in general case, because of the Halting Problem.
+Functions might be compared:
+- lexically (possibly via reduction)
+- by comparing samples of function return values for a number of samples, or for all samples in case of total functions.
+- in case of composition with identity, we could cheat by defining the following (in haskell):
+```haskell 
+id . f == f . id
+```
+
+### 4. Is the world-wide web a category in any sense? Are links morphisms?
+
+If links are composable, then they are morphisms, in which case WWW is a category.
+
+### 5. Is Facebook a category, with people as objects and friendships as morphisms?
+
+Friendships do not compose in general, hence they are not morphisms.
+
+### 6. When is a directed graph a category?
+
+When a directed graph's edges are associative, compose and every node has an identity morphism, then such directed graph is a category.
