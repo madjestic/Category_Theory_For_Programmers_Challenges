@@ -12,3 +12,18 @@ def identity(x):
     return x
 ```	
 
+### 2. Implement the composition function in your favorite language. It takes two functions as arguments and returns a function that is their composition.
+
+```python
+def compose (f, g):
+    return lambda x: f(g(x))
+
+
+```
+(see full example at 1.4.2.py)
+
+```haskell
+h :: (b -> c) -> (a -> b) -> a -> c
+h f g = f . g
+```
+
