@@ -49,3 +49,27 @@ Friendships do not compose in general, hence they are not morphisms.
 ### 6. When is a directed graph a category?
 
 When a directed graph's edges are associative, compose and every node has an identity morphism, then such directed graph is a category.
+
+## 2.7
+
+### 1. Define a higher-order function (or a function object) memoize in your favorite language. This function takes a pure function f as an argument and returns a function that behaves almost exactly like f , except that it only calls the original function once for every argument, stores the result internally, and subsequently returns this stored result every time it’s called with the same argument. You can tell the memoized function from the original by watching its performance. For instance, try to memoize a function that takes a long time to evaluate. You’ll have to wait for the result the first time you call it, but on subsequent calls, with the same argument, you should get the result immediately.
+
+```python
+import math
+
+def memoize(f):
+    memo = {}
+    def memoized(x):
+        if x not in memo:
+            memo[x] = f(x)
+        return memo[x]
+    return memoized
+
+# Use example:
+# $ python
+# > import math
+# > import _271
+# > fact = _271.memoize(math.factorial)
+# > fact(1000000)
+
+```
