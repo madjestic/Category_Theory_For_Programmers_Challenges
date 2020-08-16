@@ -197,4 +197,5 @@ digraph G
 A ⊆ B, if ∀x ∈ A : x ∈ B.
 if ∀y ∈ B : y ∈ A ∴ B ⊆ A
 ∴ (A ⊆ B)^(B ⊆ A) ∴ A = B
+
 Hence, it's a Partial Order
