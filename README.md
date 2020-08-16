@@ -209,9 +209,9 @@ I don't care about C++, but it looks like it's a Partial Order too.
 #### 3. Considering that Bool is a set of two values True and False , show that it forms two (set-theoretical) monoids with respect to, respectively, operator && (AND) and || (OR).
 
 ```haskell
-data Bool`= True | False
+data Bool = True | False
 ```
-a) &&:
+a) Consider the case of && (AND):
 
 True  && True  => True
 
@@ -236,6 +236,7 @@ False . False => False
 
 
 T == True
+
 F == False
 
 ∴
