@@ -76,6 +76,10 @@ def memoize(f):
 
 ### 2. Try to memoize a function from your standard library that you normally use to produce random numbers. Does it work?
 
+No, it does not work.
+
+### 3. Most random number generators can be initialized with a seed. Implement a function that takes a seed, calls the random number generator with that seed, and returns the result. Memoize that function. Does it work?
+
 It works, provided the random number generator seed value can be fixed, e.g.:
 
 ```python
@@ -91,3 +95,15 @@ def rand(seed):
 # > mrand(10)
 # 0.27256627902952435
 ```
+
+### 5. How many different functions are there from Bool to Bool ? Can you implement them all?
+
+There are 4 basic functions `Bool -> Bool`:
+``` haskell
+not :: Bool -> Bool
+and :: Bool -> Bool
+or  :: Bool -> Bool
+xor :: Bool -> Bool
+
+```
+and infinitely many compositions of these 4 basic functions.  I don't think that I can implement them all.
