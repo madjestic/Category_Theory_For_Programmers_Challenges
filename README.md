@@ -221,6 +221,7 @@ False && True  => False
 
 False && False => False,
 
+Since
 
 . == && (a binary operator)
 
@@ -234,6 +235,7 @@ False . True  => False
 
 False . False => False,
 
+Since
 
 T == True
 
