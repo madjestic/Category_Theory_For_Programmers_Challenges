@@ -195,7 +195,9 @@ digraph G
 #### (a) A set of sets with the inclusion relation: 𝐴 is included in 𝐵 if every element of 𝐴 is also an element of 𝐵.
 
 A ⊆ B, if ∀x ∈ A : x ∈ B.
+
 if ∀y ∈ B : y ∈ A ∴ B ⊆ A
+
 ∴ (A ⊆ B)^(B ⊆ A) ∴ A = B
 
-Hence, it's a Partial Order
+Hence, it's a Partial Order.
