@@ -374,3 +374,16 @@ digraph G
 
 ```
 ![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_364.png)
+
+#### 5. Represent addition modulo 3 as a monoid category.
+
+```dot
+digraph G
+{
+	N -> N [label = "id (+ 0 % 3)"]
+	N:w -> N:w [label = "(+1 % 3)"]
+	N:s -> N:s [label = "(+2 % 3)"]
+}
+
+```
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_365.png)
