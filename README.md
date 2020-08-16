@@ -146,7 +146,7 @@ digraph G
 ```
 ![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371.png)
 
-#### (b) A graph with one node and one (directed) edge (hint: this edge can be composed with itself)
+#### (b) A graph with one node and one (directed) edge (hint: this edge can be composed with itself).
 
 ```dot
 digraph G
@@ -156,3 +156,15 @@ digraph G
 }
 ```
 ![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371b.png)
+
+#### (c) A graph with two nodes and a single arrow between them.
+
+```dot
+digraph G
+{
+	A -> A [label = "id"]
+	A -> B [label = "f"]
+	B -> B [label = "id"]
+}
+```
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371c.png)

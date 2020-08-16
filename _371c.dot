@@ -1,0 +1,6 @@
+digraph G
+{
+	A -> A [label = "id"]
+	A -> B [label = "f"]
+	B -> B [label = "id"]
+}
