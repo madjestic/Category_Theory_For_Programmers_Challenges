@@ -131,3 +131,17 @@ digraph G {
 ```
 
 ![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_276.png)
+
+## 3.7.
+
+### 1. Generate a free category from:
+
+#### (a) A graph with one node and no edges.
+
+```dot
+digraph G
+{
+	"()" -> "()" [label = "id"]
+}
+```
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371.png)
