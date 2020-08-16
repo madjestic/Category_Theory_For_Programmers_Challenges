@@ -219,7 +219,7 @@ True  && False => False
 
 False && True  => False	 
 
-False && False => False
+False && False => False,
 
 
 . == && (a binary operator)
@@ -232,7 +232,7 @@ True  . False => False
 
 False . True  => False	 
 
-False . False => False
+False . False => False,
 
 
 T == True
@@ -271,8 +271,8 @@ F  . F  => F
 
 a  . id == id . a => a
 
-∴ id == True
+∴ True == id
 
 
-Since && acts as a binary operator . and T acts as unit (id), therefore, by definition, Bool forms a monoid in respect to && (AND).
+Since && acts as a binary operator . and True acts as unit (id), therefore, by definition, Bool forms a monoid in respect to && (AND).
 
