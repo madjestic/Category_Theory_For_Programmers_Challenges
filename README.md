@@ -76,7 +76,7 @@ def memoize(f):
 
 ### 2. Try to memoize a function from your standard library that you normally use to produce random numbers. Does it work?
 
-It works, provided the random number generator can be fixed, e.g.:
+It works, provided the random number generator seed value can be fixed, e.g.:
 
 ```python
 import random
