@@ -145,3 +145,14 @@ digraph G
 }
 ```
 ![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371.png)
+
+#### (b) A graph with one node and one (directed) edge (hint: this edge can be composed with itself)
+
+```dot
+digraph G
+{
+	"()" -> "()" [label = "id"]
+	"()":w -> "()":w [label = "id.id"]
+}
+```
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371b.png)
