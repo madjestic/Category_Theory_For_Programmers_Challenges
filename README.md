@@ -174,17 +174,18 @@ digraph G
 ```dot
 digraph G
 {
-	A -> A [label = "id"]
-	A:w -> A:w [label = "a"]
-	A:w -> A:w [label = "b"]
-	A:w -> A:w [label = "c"]
-	A:w -> A:w [label = "d"]
-	A:w -> A:w [label = "e"]
-	A:w -> A:w [label = "f"]
-	A:w -> A:w [label = "g"]
-	A:w -> A:w [label = "h"]
-	A:w -> A:w [label = "..."]
-	A:w -> A:w [label = "z"]
+	"" -> "" [label = "id"]
+	"":w -> "":w [label = "a"]
+	"":w -> "":w [label = "b"]
+	"":w -> "":w [label = "c"]
+	"":w -> "":w [label = "d"]
+	"":w -> "":w [label = "e"]
+	"":w -> "":w [label = "f"]
+	"":w -> "":w [label = "g"]
+	"":w -> "":w [label = "h"]
+	"":w -> "":w [label = "..."]
+	"":w -> "":w [label = "z"]
 }
+
 ```
 ![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371d.png)
