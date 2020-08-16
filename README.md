@@ -73,3 +73,21 @@ def memoize(f):
 # > fact(1000000)
 
 ```
+
+### 2. Try to memoize a function from your standard library that you normally use to produce random numbers. Does it work?
+
+It works, provided the random number generator can be fixed, e.g.:
+
+```python
+import random
+
+# define a random number generator with seed:
+def rand(seed):
+    fseed = math.factorial(1000000) # make it slow to compute i.o.t. test memorization
+    random.seed(fseed)
+    return random.random()
+
+# > mrand = _271.memoize(_271.rand)
+# > mrand(10)
+# 0.27256627902952435
+```
