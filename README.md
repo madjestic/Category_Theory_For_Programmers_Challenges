@@ -213,6 +213,8 @@ data Bool = True | False
 ```
 a) Consider the case of && (AND):
 
+By the definition of the truth table for AND:
+
 True  && True  => True
 
 True  && False => False
@@ -220,7 +222,6 @@ True  && False => False
 False && True  => False	 
 
 False && False => False,
-
 
 
 Since
@@ -238,6 +239,71 @@ False . True  => False
 False . False => False,
 
 
+Since
+
+T == True
+
+F == False
+
+a :: Bool
+
+∴
+
+T . T => a
+
+T . a => a
+
+a . T => a	 
+
+F . F => F,
+
+Let T == id,
+
+∴
+
+a  . a  => a
+
+id . a  => a
+
+a  . id => a	 
+
+a  . a  => a
+
+∴
+
+a  . id => a
+
+id . a  => a
+
+a  . a  => a
+
+∴
+
+a  . id == id . a => a
+
+where id == True
+
+
+Since && acts as a binary operator . and True acts as a unit (id), therefore, by definition, Bool forms a monoid in respect to && (AND).
+
+b) W.r.t || (OR): similar to a):
+
+By the definition of the truth table for OR:
+
+True  || True  => True
+
+True  || False => True
+
+False || True  => True	 
+
+False || False => False,
+
+
+Since
+
+. == || (a binary operator)
+
+and
 
 Since
 
@@ -245,40 +311,51 @@ T == True
 
 F == False
 
+a :: Bool
+
 ∴
 
-a . T => a
+T . T => T
 
-T . a => a
+a . F => a
 
-a . T => a	 
+F . a => a	 
 
 F . F => F
 
 ∴
 
-a  . id => a
+a . a => a
 
-id . a  => a
+a . F => a
 
-a  . id => a	 
+F . a => a	 
 
-F  . F  => F
+a . a => a
+
+∴
+
+a . F => a
+
+F . a => a	 
+
+a . a => a,
+
+Let F == id,
 
 ∴
 
 a  . id => a
 
-id . a  => a
+id . a  => a	 
 
-F  . F  => F
+a  . a  => a
 
 ∴
 
 a  . id == id . a => a
 
-∴ True == id
+where id == False
 
 
-Since && acts as a binary operator . and True acts as unit (id), therefore, by definition, Bool forms a monoid in respect to && (AND).
-
+Since || acts as a binary operator . and False acts as a unit (id), therefore, by definition, Bool forms a monoid in respect to || (OR).
