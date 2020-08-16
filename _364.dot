@@ -1,0 +1,5 @@
+digraph G
+{
+	Bool   -> Bool [label = "id (&& True)"]
+	Bool:w -> Bool:w [label = "(&& False)"]
+}

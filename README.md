@@ -110,6 +110,8 @@ and infinitely many compositions of these 4 basic functions.  I don't think that
 
 ### 6. Draw a picture of a category whose only objects are the types Void , () (unit), and Bool ; with arrows corresponding to all possible functions between these types. Label the arrows with the names of the functions.
 
+`dot -Tpng _myFile.dot > _myFile.png`
+
 ```dot
 digraph G {
   Void -> "()"   [label = "absurd"]
@@ -359,3 +361,16 @@ where id == False
 
 
 Since || acts as a binary operator . and False acts as a unit (id), therefore, by definition, Bool forms a monoid in respect to || (OR).
+
+
+#### 4. Represent the Bool monoid with the AND operator as a category: List the morphisms and their rules of composition.
+
+```dot
+digraph G
+{
+	Bool   -> Bool [label = "id (&& True)"]
+	Bool:w -> Bool:w [label = "(&& False)"]
+}
+
+```
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_364.png)
