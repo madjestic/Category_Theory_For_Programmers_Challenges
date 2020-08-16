@@ -168,3 +168,23 @@ digraph G
 }
 ```
 ![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371c.png)
+
+#### (d) A graph with a single node and 26 arrows marked with the letters of the alphabet: a, b, c … z.
+
+```dot
+digraph G
+{
+	A -> A [label = "id"]
+	A:w -> A:w [label = "a"]
+	A:w -> A:w [label = "b"]
+	A:w -> A:w [label = "c"]
+	A:w -> A:w [label = "d"]
+	A:w -> A:w [label = "e"]
+	A:w -> A:w [label = "f"]
+	A:w -> A:w [label = "g"]
+	A:w -> A:w [label = "h"]
+	A:w -> A:w [label = "..."]
+	A:w -> A:w [label = "z"]
+}
+```
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371d.png)
