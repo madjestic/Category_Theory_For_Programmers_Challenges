@@ -201,3 +201,49 @@ if ∀y ∈ B : y ∈ A ∴ B ⊆ A
 ∴ (A ⊆ B)^(B ⊆ A) ∴ A = B
 
 Hence, it's a Partial Order.
+
+#### (b) C++ types with the following subtyping relation: T1 is a subtype of T2 if a pointer to T1 can be passed to a function that expects a pointer to T2 without triggering a compilation error.
+
+I don't care about C++, but it looks like it's a Partial Order too.
+
+#### 3. Considering that Bool is a set of two values True and False , show that it forms two (set-theoretical) monoids with respect to, respectively, operator && (AND) and || (OR).
+
+```haskell
+data Bool`= True | False
+```
+a1) &&:
+
+True  && True  => True
+True  && False => False
+False && True  => False	 
+False && False => False
+
+. == && (a binary operator)
+∴
+True  . True  => True
+True  . False => False
+False . True  => False	 
+False . False => False
+
+T == True
+F == False
+∴
+a . T => a
+T . a => a
+a . T => a	 
+F . F => F
+∴
+a  . id => a
+id . a  => a
+a  . id => a	 
+F  . F  => F
+∴
+a  . id => a
+id . a  => a
+F  . F  => F
+∴
+a  . id == id . a => a
+∴ id == True
+
+Since && acts as a binary operator . and T acts as unit (id), therefore, by definition, Bool forms a monoid in respect to && (AND).
+
