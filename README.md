@@ -132,7 +132,7 @@ digraph G {
 
 ![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_276.png)
 
-## 3.7.
+## 3.6.
 
 ### 1. Generate a free category from:
 
@@ -144,7 +144,7 @@ digraph G
 	"()" -> "()" [label = "id"]
 }
 ```
-![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371.png)
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_361.png)
 
 #### (b) A graph with one node and one (directed) edge (hint: this edge can be composed with itself).
 
@@ -155,7 +155,7 @@ digraph G
 	"()":w -> "()":w [label = "id.id"]
 }
 ```
-![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371b.png)
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_361b.png)
 
 #### (c) A graph with two nodes and a single arrow between them.
 
@@ -167,7 +167,7 @@ digraph G
 	B -> B [label = "id"]
 }
 ```
-![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371c.png)
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_361c.png)
 
 #### (d) A graph with a single node and 26 arrows marked with the letters of the alphabet: a, b, c … z.
 
@@ -188,4 +188,13 @@ digraph G
 }
 
 ```
-![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_371d.png)
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_361d.png)
+
+### 2. What kind of order is this?
+
+#### (a) A set of sets with the inclusion relation: 𝐴 is included in 𝐵 if every element of 𝐴 is also an element of 𝐵.
+
+A ⊆ B, if ∀x ∈ A : x ∈ B.
+if ∀y ∈ B : y ∈ A ∴ B ⊆ A
+∴ (A ⊆ B)^(B ⊆ A) ∴ A = B
+Hence, it's a Partial Order
