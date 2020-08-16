@@ -6,7 +6,6 @@ digraph G {
   "()"   -> "()" [label = "id"]
   "()"   -> Bool:nw [label = "true"]
   "()"   -> Bool [label = "false"]
-#  "()"   -> "Void"
   
   Bool -> Bool [label = "id"]
   Bool:sw -> Bool:nw [label = "not"]
@@ -15,5 +14,4 @@ digraph G {
   Bool:sw -> Bool:nw [label = "xor"]
   
   Bool -> "()" [label = "unit"]
-#   "Bool" -> "Void"
 }
