@@ -1,0 +1,19 @@
+digraph G {
+  Void -> "()"   [label = "absurd"]
+  Void -> Bool   [label = "absurd"]
+  Void -> Void   [label = "id"]
+  
+  "()"   -> "()" [label = "id"]
+  "()"   -> Bool:nw [label = "true"]
+  "()"   -> Bool [label = "false"]
+#  "()"   -> "Void"
+  
+  Bool -> Bool [label = "id"]
+  Bool:sw -> Bool:nw [label = "not"]
+  Bool:sw -> Bool:nw [label = "and"]
+  Bool:sw -> Bool:nw [label = "or"]
+  Bool:sw -> Bool:nw [label = "xor"]
+  
+  Bool -> "()" [label = "unit"]
+#   "Bool" -> "Void"
+}

@@ -107,3 +107,6 @@ xor :: Bool -> Bool
 
 ```
 and infinitely many compositions of these 4 basic functions.  I don't think that I can implement them all.
+
+### 6. Draw a picture of a category whose only objects are the types Void , () (unit), and Bool ; with arrows corresponding to all possible functions between these types. Label the arrows with the names of the functions.
+
