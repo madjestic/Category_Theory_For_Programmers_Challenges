@@ -110,3 +110,4 @@ and infinitely many compositions of these 4 basic functions.  I don't think that
 
 ### 6. Draw a picture of a category whose only objects are the types Void , () (unit), and Bool ; with arrows corresponding to all possible functions between these types. Label the arrows with the names of the functions.
 
+![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_276.png)
