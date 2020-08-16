@@ -211,39 +211,67 @@ I don't care about C++, but it looks like it's a Partial Order too.
 ```haskell
 data Bool`= True | False
 ```
-a1) &&:
+a) &&:
 
 True  && True  => True
+
 True  && False => False
+
 False && True  => False	 
+
 False && False => False
 
+
 . == && (a binary operator)
+
 ∴
+
 True  . True  => True
+
 True  . False => False
+
 False . True  => False	 
+
 False . False => False
+
 
 T == True
 F == False
+
 ∴
+
 a . T => a
+
 T . a => a
+
 a . T => a	 
+
 F . F => F
+
 ∴
+
 a  . id => a
+
 id . a  => a
+
 a  . id => a	 
+
 F  . F  => F
+
 ∴
+
 a  . id => a
+
 id . a  => a
+
 F  . F  => F
+
 ∴
+
 a  . id == id . a => a
+
 ∴ id == True
+
 
 Since && acts as a binary operator . and T acts as unit (id), therefore, by definition, Bool forms a monoid in respect to && (AND).
 
