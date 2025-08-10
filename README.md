@@ -387,3 +387,20 @@ digraph G
 
 ```
 ![](https://github.com/madjestic/Category_Theory_For_Programmers_Challenges/blob/master/_365.png)
+
+
+## 4.3 Kleisli Category
+
+### 4.3.1. Construct the Kleisli category for partial functions (define composition and identity).
+
+```haskell
+data Partial a b = Partial { runPartial :: a -> Maybe b}
+
+instance Category Partial where
+  id :: Partial a a
+  id = Partial Just
+
+  (.) :: Partial b c -> Partial a b -> Partial a c
+  --(Partial g) . (Partial f) = Partial (\x -> f x >>= g)
+  (Partial g) . (Partial f) = Partial (f >=> g)
+```
