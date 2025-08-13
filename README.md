@@ -404,3 +404,118 @@ instance Category Partial where
   --(Partial g) . (Partial f) = Partial (\x -> f x >>= g)
   (Partial g) . (Partial f) = Partial (f >=> g)
 ```
+
+## 5.8.4. Implement the equivalent of Haskell Either as a generic type in python:
+```python
+from dataclasses import dataclass
+from typing import Generic, TypeVar
+
+L = TypeVar("L")
+R = TypeVar("R")
+
+@dataclass
+class Left:
+    a: L
+
+@dataclass
+class Right:
+    b: R
+
+@dataclass
+class Either(Generic[L,R]):
+    pass
+
+def safe_div(x: float, y: float) -> Either[str, float]:
+    if y == 0:
+        return Left("Division by zero")
+    return Right(x/y)
+```
+
+## 6.8.2
+```python
+from dataclasses import dataclass
+from typing import Union
+from math import pi
+
+@dataclass(frozen=True)
+class Circle:
+    radius: float
+
+@dataclass(frozen=True)
+class Rect:
+    width:  float
+    height: float
+
+Shape = Union[Circle, Rect]
+
+def area (shape: Shape) -> float:
+    match shape:
+        case Circle(radius):
+            return pi * radius**2
+        case Rect(width, height):
+            return width * height
+        case _:
+            raise TypeError("Unknown shape")
+
+def main():
+    circle = Circle (2.0)
+    print(area(circle))
+```
+```haskell
+data Shape = Circle Float
+           | Rect Float Float
+
+area :: Shape -> Float
+area (Circle r) = pi * r * r
+area (Rect d h) = d * h
+```
+
+## 6.8.3
+## 6.8.4
+```python
+from dataclasses import dataclass
+from typing import Union
+from math import pi
+
+@dataclass(frozen=True)
+class Circle:
+    radius: float
+
+@dataclass(frozen=True)
+class Rect:
+    width:  float
+    height: float
+
+@dataclass(frozen=True)
+class Square:
+    size: float
+
+Shape = Union[Circle, Rect]
+
+def area (shape: Shape) -> float:
+    match shape:
+        case Circle(radius):
+            return pi * radius**2
+        case Rect(width, height):
+            return width * height
+        case Square(size):
+            return size**2
+        case _:
+            raise TypeError("Unknown shape")
+
+def circ (shape: Shape) -> float:
+    match shape:
+        case Circle (radius):
+            return 2.0 * pi * radius
+        case Rect (width, height):
+            return 2.0 * (width + height)
+        case Square (size):
+            return 4.0 * size
+        case _:
+            raise TypeError("Unknown shape")
+
+def main():
+    circle = Circle (2.0)
+    print(area(circle))
+    print(circ(circle))
+```
